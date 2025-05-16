@@ -14,6 +14,102 @@ body {
 /* Header Section */
 header {
     background-color: #459293; /* Battleship Grey background */
+    color: black;
+    padding: 20px 20px;
+    letter-spacing 10px;
+    font-family: Impact, sans-serif;
+    font-size: 30px
+
+}
+
+/* About Section */
+#about {
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 10px 50px 10px 10px;
+    margin-left: 30px;
+
+
+}
+
+#about img {
+    margin-top: 20px;
+
+}
+
+#about p {
+    font-size: 20px;
+    margin: 20px 50px;
+
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #e0f7fa; /* Light cyan background */
+    padding: 50px 20px;
+
+}
+
+#portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+
+}
+
+.portfolio-item {
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    color: black;
+}
+
+.portfolio-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: black;
+}
+
+.portfolio-item a {
+    color: #00796b;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Footer Section */
+footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+</style>
+
+<!DOCTYPE html>
+
+<style>
+/* Global Styles */
+body {
+    font-family: Trebuchet MS, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center; /* Center align all text globally */
+
+}
+
+/* Header Section */
+header {
+    background-color: #459293; /* Battleship Grey background */
     padding: 40px 40px;
     text-align: center;
     font-size: 50px;
@@ -139,6 +235,24 @@ footer p {
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>My Work</h2>
+	<div class="portfolio-item">
+             <a href="islington-tribune.html">
+              <img src="Images\islington_tribune.jpg" alt="Islington Tribune">
+            <a/>
+            <h3>The Islington Tribune</h3>
+            <p>My work for The Islington Tribune</p>
+	    <br>
+            <a href="islington-tribune.html">View Project</a>
+        </div>
+	<div class="portfolio-item">
+             <a href="westminster-extra.html">
+              <img src="Images\westminster_extra.jpg" alt="Westminster Extra">
+            <a/>
+            <h3>Westminster Extra</h3>
+            <p>My work for Westminster Extra</p>
+	    <br>
+            <a href="westminster-extra.html">View Project</a>
+        </div>
         <div class="portfolio-item">
              <a href="falmouth-anchor.html">
               <img src="Images\Falmouth_Anchor.jpg" alt="Falmouth Anchor">
