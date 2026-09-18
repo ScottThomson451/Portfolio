@@ -1,269 +1,260 @@
 <!DOCTYPE html>
-
-<style>
-/* Global Styles */
-body {
-    font-family: Trebuchet MS, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-/* Header Section */
-header {
-    background-color: #459293; /* Battleship Grey background */
-    padding: 40px 40px;
-    text-align: center;
-    font-size: 50px;
-    
-}
-
-header a {
-    color: black;
-    text-decoration: none;
-    letter-spacing 10px;
-    font-family: Impact, sans-serif;
-   
-}
-
-/* Islington Tribune Section */
-#about {
-    background-color: #f2f2f2; /* Light gray background */
-    padding: 10px 50px 10px 10px;
-    margin-left: 30px;
-    text-align: center;
-
-}
-
-#about img {
-    width: 150px;
-    height: 200px;
-    margin-top: 20px;
-
-}
-
-#about h {
-    font-size: 20px;
-    margin: 20px 50px;
-    font-weight: bold;
-
-}
-
-
-#about p {
-    font-size: 20px;
-    margin: 20px 50px;
-
-}
-
-/* Portfolio Section */
-#portfolio {
-    background-color: #e0f7fa; /* Light cyan background */
-    padding: 50px 20px;
-    
-}
-
-#portfolio h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.portfolio-item {
-    margin: 20px;
-    display: inline;
-}
-
-.portfolio-item img {
-    width: 300px;
-    height: 200px;
-}
-
-.portfolio-item h3 {
-    font-size: 24px;
-    margin-top: 10px;
-    color: black;
-}
-
-.portfolio-item a {
-    color: #00796b;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.portfolio-item p1 {
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.portfolio-item p2 {
-    color: #acacad;
-    text-decoration: none;
-    font-size: 12px;
-    font-style: italic
-}
-
-/* Footer Section */
-footer {
-    background-color: white;
-    color: black;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-    font-size: 16px;
-}
-
-</style>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Scott Thomson</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+    <title>Scott Thomson | Journalist Portfolio</title>
+
+    <style>
+    /* ---------- Global ---------- */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Trebuchet MS", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        color: #1a1a1a;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+        background-color: #459293;
+        padding: 40px;
+        text-align: center;
+    }
+
+    header a {
+        color: black;
+        text-decoration: none;
+        font-family: Impact, "Arial Black", sans-serif;
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+
+    /* ---------- About / PA Media ---------- */
+    #about {
+        background-color: #f2f2f2;
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    #about img {
+        width: 150px;
+        height: auto;          /* keeps the original proportions */
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    #about h2 {
+        font-size: 22px;
+        margin: 0 0 10px;
+    }
+
+    #about p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    /* ---------- Portfolio ---------- */
+    #portfolio {
+        background-color: #e0f7fa;
+        padding: 50px 30px;
+    }
+
+    .portfolio-item {
+        display: flex;              /* stacks children vertically */
+        flex-direction: column;
+        align-items: flex-start;    /* left-aligns everything */
+        text-align: left;
+        max-width: 700px;
+        margin: 0 0 50px 0;         /* space between items, no centring */
+    }
+
+    .portfolio-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .portfolio-item img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;               /* keeps the original proportions */
+        display: block;
+    }
+
+    .portfolio-item .credit {
+        color: #8a8a8d;
+        font-size: 12px;
+        font-style: italic;
+        margin: 8px 0 12px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 24px;
+        color: black;
+        margin: 0 0 12px;
+    }
+
+    .portfolio-item .excerpt {
+        font-size: 18px;
+        margin: 0 0 16px;
+    }
+
+    .portfolio-item a {
+        color: #00796b;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .portfolio-item a:hover,
+    .portfolio-item a:focus {
+        text-decoration: underline;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+        background-color: white;
+        color: black;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* ---------- Small screens ---------- */
+    @media (max-width: 600px) {
+        header a {
+            font-size: 30px;
+        }
+
+        #portfolio {
+            padding: 30px 20px;
+        }
+    }
+    </style>
 </head>
+
 <body>
 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <a href="index.html">Scott Thomson; Journalist Portfolio</a>
     </header>
 
-     <!-- Islington Tribune -->
+    <!-- PA Media -->
     <section id="about">
         <img src="Images/PA-media.jpg" alt="PA Media">
-        <br>
-        <br>
-	<h>PA Media</h>
+        <h2>PA Media</h2>
         <p>Bylines in major news outlets through PA Media's newswire</p>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio -->
     <section id="portfolio">
 
         <div class="portfolio-item">
             <a href="https://www.standard.co.uk/business/money/europe-wework-barcelona-edinburgh-london-b1293281.html">
-              <img src="Images/Evening_Standard.jpg" alt="The London Evening Standard">
-			</a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+                <img src="Images/Evening_Standard.jpg" alt="The London Evening Standard">
+            </a>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>Revolut bets on luxury experiences with plans to open first airport lounge</h3>
-            <p1>"The ‘gutsy and beautiful’ lounge in Copenhagen Airport will aim to stand out against other hospitality benefits.”</p1>
-            <br>
-            <br>
-		<a href="https://www.standard.co.uk/business/money/europe-wework-barcelona-edinburgh-london-b1293281.html">Please find the article linked here.</a>
-	    </div>
-		    
+            <p class="excerpt">"The 'gutsy and beautiful' lounge in Copenhagen Airport will aim to stand out against other hospitality benefits."</p>
+            <a href="https://www.standard.co.uk/business/money/europe-wework-barcelona-edinburgh-london-b1293281.html">Please find the article linked here.</a>
+        </div>
+
         <div class="portfolio-item">
             <a href="https://www.independent.co.uk/travel/revolut-airport-lounges-copenhagen-europe-b3032488.html">
-              <img src="Images/Independent.jpg" alt="The Independent">
-			</a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+                <img src="Images/Independent.jpg" alt="The Independent">
+            </a>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>Revolut to launch new premium airport lounges across Europe</h3>
-            <p1>"Revolut will open its first new premium lounge in Copenhagen next year.”</p1>
-            <br>
-            <br>
-		<a href="https://www.independent.co.uk/travel/revolut-airport-lounges-copenhagen-europe-b3032488.html">Please find the article linked here.</a>
-	    </div>
+            <p class="excerpt">"Revolut will open its first new premium lounge in Copenhagen next year."</p>
+            <a href="https://www.independent.co.uk/travel/revolut-airport-lounges-copenhagen-europe-b3032488.html">Please find the article linked here.</a>
+        </div>
 
         <div class="portfolio-item">
             <a href="https://www.standard.co.uk/business/money/alevel-nationwide-building-society-gen-z-press-association-b1293334.html">
-              <img src="Images/Evening_Standard.jpg" alt="The London Evening Standard">
-			</a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+                <img src="Images/Evening_Standard.jpg" alt="The London Evening Standard">
+            </a>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>Noise and stolen food among main reasons why students fall out – poll</h3>
-            <p1>"Failing to budget was 20% of students’ top regrets at university, according to research for Nationwide FlexStudent.”</p1>
-            <br>
-            <br>
-		<a href="https://www.standard.co.uk/business/money/alevel-nationwide-building-society-gen-z-press-association-b1293334.html">Please find the article linked here.</a>
-	    </div>
+            <p class="excerpt">"Failing to budget was 20% of students' top regrets at university, according to research for Nationwide FlexStudent."</p>
+            <a href="https://www.standard.co.uk/business/money/alevel-nationwide-building-society-gen-z-press-association-b1293334.html">Please find the article linked here.</a>
+        </div>
 
         <div class="portfolio-item">
             <a href="https://www.independent.co.uk/news/uk/home-news/alevel-tom-riley-nationwide-building-society-gen-z-press-association-b3032700.html">
-              <img src="Images/Independent.jpg" alt="The Independent">
-			</a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+                <img src="Images/Independent.jpg" alt="The Independent">
+            </a>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>Noise and stolen food among main reasons why students fall out – poll</h3>
-            <p1>"Failing to budget was 20% of students’ top regrets at university, according to research for Nationwide FlexStudent.”</p1>
-            <br>
-            <br>
-		<a href="https://www.independent.co.uk/news/uk/home-news/alevel-tom-riley-nationwide-building-society-gen-z-press-association-b3032700.html">Please find the article linked here.</a>
-	    </div>
+            <p class="excerpt">"Failing to budget was 20% of students' top regrets at university, according to research for Nationwide FlexStudent."</p>
+            <a href="https://www.independent.co.uk/news/uk/home-news/alevel-tom-riley-nationwide-building-society-gen-z-press-association-b3032700.html">Please find the article linked here.</a>
+        </div>
 
         <div class="portfolio-item">
             <a href="https://www.irishmirror.ie/news/irish-news/gallery/solar-eclipse-glasses-dublin-queues-37543667">
-              <img src="Images/Mirror.jpg" alt="The Irish Mirror">
+                <img src="Images/Mirror.jpg" alt="The Irish Mirror">
             </a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>Huge queues form in Dublin as rare solar eclipse prepares to darken Irish skies</h3>
-            <p1>"Hundreds line up for certified eclipse glasses before darkness falls”</p1>
-            <br>
-            <br>
-		<a href="https://www.irishmirror.ie/news/irish-news/gallery/solar-eclipse-glasses-dublin-queues-37543667">Please find the article linked here.</a>
-	    </div>
+            <p class="excerpt">"Hundreds line up for certified eclipse glasses before darkness falls"</p>
+            <a href="https://www.irishmirror.ie/news/irish-news/gallery/solar-eclipse-glasses-dublin-queues-37543667">Please find the article linked here.</a>
+        </div>
 
         <div class="portfolio-item">
             <a href="https://www.heraldscotland.com/news/national/26457927.can-watch-partial-solar-eclipse-safely/">
-              <img src="Images/Herald.jpg" alt="The Herald">
-            <a/>
-            <br>
-            <p2>media.info</p2>
+                <img src="Images/Herald.jpg" alt="The Herald">
+            </a>
+            <p class="credit">media.info</p>
             <h3>How can I watch the partial solar eclipse safely?</h3>
-            <p1>"On Wednesday, the UK will experience a partial solar eclipse, with the Moon obscuring more than 90% of the Sun.”</p1>
-            <br>
-            <br>
-		<a href="https://www.heraldscotland.com/news/national/26457927.can-watch-partial-solar-eclipse-safely/">Please find the article linked here.</a>
-	    </div>
+            <p class="excerpt">"On Wednesday, the UK will experience a partial solar eclipse, with the Moon obscuring more than 90% of the Sun."</p>
+            <a href="https://www.heraldscotland.com/news/national/26457927.can-watch-partial-solar-eclipse-safely/">Please find the article linked here.</a>
+        </div>
 
         <div class="portfolio-item">
             <a href="https://www.independent.co.uk/news/science/sun-press-association-moon-london-symptoms-b3031786.html">
-              <img src="Images/Independent.jpg" alt="The Independent">
-           </a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+                <img src="Images/Independent.jpg" alt="The Independent">
+            </a>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>How can I watch the partial solar eclipse safely?</h3>
-            <p1>"Looking directly at the eclipse can pose severe health risks.”</p1>
-            <br>
-            <br>
-		<a href="https://www.independent.co.uk/news/science/sun-press-association-moon-london-symptoms-b3031786.html">Please find the article linked here.</a>
-	    </div>	
-	    	
+            <p class="excerpt">"Looking directly at the eclipse can pose severe health risks."</p>
+            <a href="https://www.independent.co.uk/news/science/sun-press-association-moon-london-symptoms-b3031786.html">Please find the article linked here.</a>
+        </div>
+
         <div class="portfolio-item">
             <a href="https://www.independent.co.uk/news/uk/crime/stella-creasy-mp-clifford-wilby-b3031252.html">
-              <img src="Images/Independent.jpg" alt="The Independent">
+                <img src="Images/Independent.jpg" alt="The Independent">
             </a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
-            <h3>‘Aggressive and abusive’ man found guilty of harassing Stella Creasy MP on Tube train</h3>
-            <p1>"Clifford Wilby started talking to her about knife crime and her ‘failings as a Member of Parliament’.”</p1>
-            <br>
-            <br>
-		<a href="https://www.independent.co.uk/news/uk/crime/stella-creasy-mp-clifford-wilby-b3031252.html">Please find the article linked here.</a>
-	    </div>	
+            <p class="credit">commons.wikipedia.org</p>
+            <h3>'Aggressive and abusive' man found guilty of harassing Stella Creasy MP on Tube train</h3>
+            <p class="excerpt">"Clifford Wilby started talking to her about knife crime and her 'failings as a Member of Parliament'."</p>
+            <a href="https://www.independent.co.uk/news/uk/crime/stella-creasy-mp-clifford-wilby-b3031252.html">Please find the article linked here.</a>
+        </div>
 
         <div class="portfolio-item">
             <a href="https://www.mylondon.news/news/east-london-news/east-london-man-63-guilty-34441441">
-              <img src="Images/MyLondon.jpg" alt="MyLondon">
+                <img src="Images/MyLondon.jpg" alt="MyLondon">
             </a>
-            <br>
-            <p2>commons.wikipedia.org</p2>
+            <p class="credit">commons.wikipedia.org</p>
             <h3>East London man, 63, guilty of harassing Stella Creasy MP on Tube train</h3>
-            <p1>"Clifford Wilby became 'abusive and aggressive' and tried to stop her leaving the train.”</p1>
-            <br>
-            <br>
-		<a href="https://www.mylondon.news/news/east-london-news/east-london-man-63-guilty-34441441">Please find the article linked here.</a>
-	    </div>
+            <p class="excerpt">"Clifford Wilby became 'abusive and aggressive' and tried to stop her leaving the train."</p>
+            <a href="https://www.mylondon.news/news/east-london-news/east-london-man-63-guilty-34441441">Please find the article linked here.</a>
+        </div>
 
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>© Scott Thomson</p>
+    </footer>
+
 </body>
 </html>
+
